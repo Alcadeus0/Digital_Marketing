@@ -5,6 +5,10 @@
     font-family:  Impact;
 }
 
+body{
+    background-color: black;
+}
+
 /*Header*/
 
 header{
@@ -50,6 +54,7 @@ nav{
 }
 .nav{
     display: block;
+    z-index: 1;
     
 }
 ul{
@@ -107,17 +112,23 @@ body + section{
 
 
 main + section{
-    background: #F66E00;
+    background: rgba(0, 0, 0, 0.75);
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5%;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 20vh;
 }
-
-
-
-
+section video{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.vsc-controller{
+    display: none;
+}
 
 
 /*Animations*/
