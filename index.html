@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="all.css">
     <script src="script.js" defer></script>
     <title>DigiMark</title>
 </head>
 <body>
 
-
     <header>
-        <div class="logo">Logo</div>
-        <div class="circle">
-            <img src="assets/bars.svg">
-        </div>
+            <div class="logo">Logo</div>
+            <div class="circle">
+                <img src="assets/bars.svg">
+            </div>
     </header>
+
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -29,20 +29,55 @@
 
 
     <section>
-        <div class="attention">
-            <div></div>
-            <img src="assets/banner.jpg">
+        <img src="assets/banner.jpg">
+        </section>
+
+    <article>
+        <img src="assets/adpicc.jpg">
+        <div>
+            <h2>some text here</h2>
+            <p>some more text here</p>
         </div>
-        <article>
-            <img>
-            <div></div>
-        </article>
-    </section>
-
+    </article>
     
-    <main>
+    <div>
+        We're a global creative & media agency
+        that works differently because
+        <span>we're built differently.</span>
+    </div>
 
-    </main>
+
+    <!--image slider start-->
+    <main>
+        <div class="slides">
+
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+
+          <div class="slide first">
+            <img src="assets/car1.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="assets/car2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="assets/car3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="assets/car4.jpg" alt="">
+          </div>
+          
+          <div class="navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+        </div>
+    </main>>
+      <!--image slider end-->
 
 
 
@@ -75,6 +110,6 @@
         </div>
     </footer>
 
-    
+
 </body>
 </html>

@@ -6,128 +6,125 @@
 }
 body{
     background-color: black;
-}
-
-
-
-
-/*Header*/
-header{
-    top: 0;
-    position: sticky;
-    padding: 1em 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 111;
-}
-.logo{
-    font-size: clamp(1.75rem , 5vw , 3rem);
-    color: white;
-}
-.circle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: min(8vw, 3rem);
-    width: min(8vw, 3rem);
-    border: 3px solid hsl(0, 59%, 20%);
-    border-radius: 25%;
-    background-color: white;
-    padding: .75em;
-    cursor: pointer;
     position: relative;
 }
-.circle:hover{
-    background-color: #ffc48c;
-    transition: background-color .5s ease-in-out ;
-}
-.circle img{
-    color: hsl(0, 59%, 20%);
-}
-
-
-/*Navigation Part*/
-nav{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: 
-    repeating-radial-gradient(
-      circle at top right, 
-      hsl(0, 0%, 85%),
-      hsl(30, 100%, 48%) 150px
-    );
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    animation: fadein 1s;
-}
-.nav{
-    display: block;
-    z-index: 10;
-}
-ul{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-}
-li{
-    position: relative;
-    margin: 60px 0px;
-}
-
-li a{
-    text-decoration: none;
-    font-size: clamp(1.5rem , 5vw , 3rem);
-    color: hsl(0, 59%, 20%);
-    padding: 5px 10px;
-    animation: fadein 3s;
-}
-li a:after{
-    position: absolute;
-    left: 0;
-    content: "";
-    height: 100%;
-    width: 100%;
-    border-radius: 20px ;
-    background: hsl(0, 0%, 100%);
-    border: 3px solid hsl(0, 59%, 20%);
-    transform: scaleY(0);
-    transition: 0.3s ease;
-    z-index: -1;
-}
-li a:hover:after{
-    transform: scaleY(1);
-}
-
-
-
-
 
 /*Banner*/
-body + section{
-    display: flex;
-    flex-direction: column;
-}
-.attention{
+nav+section{
+    width: 100%;
     display: flex;
 }
 
-.attention div{
-    width: 50%;
+section img{
+    width: 100%;
+}
+
+
+article{
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+}
+article img{
+    width: 60%;
     height: auto;
-    background-color: black;
+}
+article div{
+    color: white;
+    font-size: clamp(1.25rem , 5vw , 3rem);
 }
 
-.attention img{
-    max-width: 75%;
+article+div{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem , 6vw , 4rem);
+    padding: 2em 2em;
+    font-weight: bold;
 }
+
+
+
+
+main{
+    width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1em;
+  }
+  .slides{
+    width: 500%;
+    display: flex;
+  }
+  .slides input{
+    display: none;
+  }
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  .slide img{
+    width: 100%;
+  }
+  /*css for manual slide navigation*/
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  .navigation{
+    position: absolute;
+    width: 100%;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid hsl(0, 59%, 20%);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: hsl(0, 59%, 20%);
+  }
+
+  #radio1:checked + .navigation .manual-btn{
+    background-color: hsl(0, 59%, 20%);
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 main + section{
@@ -164,7 +161,7 @@ section .btn{
     font-family: "montserrat";
     text-decoration: none;
     border: 3px solid hsl(0, 59%, 20%);
-    padding: 1em 1em;
+    padding: 1em;
     text-transform: uppercase;
     overflow: hidden;
     transition: 1s all ease;
@@ -197,50 +194,6 @@ section .btn{
     height: 0;
     transform: translate(-50%,-50%) rotate(135deg);
   }
-  
-
-
-  /*Footer*/
-footer{
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-footer div:first-child{
-    display: flex;
-    gap: 15px;
-}
-svg{
-    height: 40px;
-    fill: white;
-}
-svg:hover{
-    fill: #ffc48c;
-    cursor: pointer;
-}
-footer div:last-child{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-div a{
-    text-decoration: none;
-    color: white;
-}
-div a:hover, h5:hover{
-    color: #ffc48c;
-    cursor: pointer;
-}
-h5{
-    color: white;
-}
-
-
-
 
 
 
@@ -276,9 +229,14 @@ h5{
         }
     .btn1, .btn2{
         width: 50%;
+        padding: .5em;
     }
     main + section{
         height: 45vh;
     }
+    .navigation{
+      margin-top: 50%;
+    }
+
 }
 
